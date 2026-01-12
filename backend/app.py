@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify
 import joblib
+from flask_cors import CORS
 import numpy as np
 
 svm_model = joblib.load("train/svm_model.pkl")
 vectorizer = joblib.load("train/vectorizer.pkl")
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():
