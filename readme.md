@@ -1,0 +1,1 @@
+multiple supervised machine learning models were experimented with to classify sms messages as spam or ham.
